@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ResolvX — sites e sistemas em Maringá</title>
+<meta name="description" content="Sites com área do cliente, 2ª via de boleto e Pix com baixa automática, e sistemas sob medida para imobiliárias, contabilidades e comércio de Maringá e região.">
+<meta name="theme-color" content="#1E1D1B">
+<link rel="icon" href="img/favicon.ico" sizes="any">
+<link rel="icon" href="img/resolvx-icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/resolvx-icone-180.png">
+<meta property="og:title" content="ResolvX — sites e sistemas em Maringá">
+<meta property="og:description" content="Área do cliente, 2ª via de boleto e Pix com baixa automática, automações. Feito em Maringá.">
+<meta property="og:image" content="https://resolvx.com.br/img/resolvx-icone-512.png">
+<link rel="preload" href="fonts/bebas-neue.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Bebas Neue";src:url(fonts/bebas-neue.woff2) format("woff2");font-display:swap}
+@font-face{font-family:Inter;font-weight:400;src:url(fonts/inter-400.woff2) format("woff2");font-display:swap}
+@font-face{font-family:Inter;font-weight:600;src:url(fonts/inter-600.woff2) format("woff2");font-display:swap}
+@font-face{font-family:Inter;font-weight:700;src:url(fonts/inter-700.woff2) format("woff2");font-display:swap}
+:root{--amb:#E8A420;--gra:#1E1D1B;--off:#F2EDE4;--sup:#2A2926;--t2:#A8A197;--bd:#3A3935}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--gra);color:var(--off);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.bebas{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spacing:.5px}
+.amb{color:var(--amb)}
+.t2{color:var(--t2)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;padding:14px 22px;border-radius:10px;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-p{background:var(--amb);color:var(--gra)}
+.btn-s{border:1px solid var(--bd);color:var(--off)}
+.btn-s:hover{border-color:var(--t2)}
+.wa{width:20px;height:20px;flex:none}
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(30,29,27,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--bd)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+.nav .logo svg{height:26px;width:auto}
+.nav nav{display:flex;gap:26px;font-size:15px;color:var(--t2)}
+.nav nav a:hover{color:var(--off)}
+.nav .btn{padding:10px 16px;font-size:14px}
+@media(max-width:860px){.nav nav{display:none}}
+/* hero */
+.hero{padding:72px 0 64px}
+.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(46px,7.2vw,86px);line-height:.95}
+.hero p.lead{font-size:19px;color:var(--t2);margin:22px 0 30px;max-width:540px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero .note{margin-top:18px;font-size:14px;color:var(--t2)}
+.phone{justify-self:center;width:min(300px,78vw);border-radius:36px;padding:10px;background:#111;border:1px solid var(--bd);box-shadow:0 30px 80px rgba(0,0,0,.5);position:relative}
+.phone img{border-radius:28px;width:100%;height:auto}
+.phone .tag{position:absolute;left:50%;bottom:-14px;transform:translateX(-50%);background:var(--sup);border:1px solid var(--bd);font-size:12px;color:var(--t2);padding:5px 12px;border-radius:99px;white-space:nowrap}
+@media(max-width:860px){.hero{padding:44px 0 56px}.hero .grid{grid-template-columns:1fr}.phone{margin-top:12px}}
+/* sections */
+section.s{padding:84px 0;border-top:1px solid var(--bd)}
+.kicker{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--amb);margin-bottom:12px}
+h2{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:clamp(38px,5vw,58px);line-height:1;letter-spacing:.5px}
+.sub{color:var(--t2);font-size:18px;margin-top:14px;max-width:640px}
+.cards{display:grid;gap:18px;margin-top:40px}
+.c3{grid-template-columns:repeat(3,1fr)}.c4{grid-template-columns:repeat(4,1fr)}.c2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:960px){.c4{grid-template-columns:repeat(2,1fr)}.c3{grid-template-columns:1fr}}
+@media(max-width:640px){.c4,.c2{grid-template-columns:1fr}}
+.card{background:var(--sup);border:1px solid var(--bd);border-radius:16px;padding:26px}
+.card h3{font-size:19px;margin:14px 0 8px}
+.card p{color:var(--t2);font-size:15.5px}
+.ico{width:42px;height:42px;border-radius:11px;background:rgba(232,164,32,.12);display:grid;place-items:center}
+.ico svg{width:22px;height:22px;stroke:var(--amb);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.dor .card{background:transparent}
+.dor .card h3{margin-top:0;font-size:18px}
+.dor .x{font-family:"Bebas Neue";font-size:44px;line-height:1;color:var(--amb);display:block;margin-bottom:6px}
+/* trabalhos */
+.work{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+@media(max-width:860px){.work{grid-template-columns:1fr}}
+.wk{background:var(--sup);border:1px solid var(--bd);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.wk .shot{aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--bd);background:#111}
+.wk .shot img{width:100%;height:100%;object-fit:cover;object-position:top}
+.wk .body{padding:24px;flex:1;display:flex;flex-direction:column}
+.badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.6px;padding:5px 10px;border-radius:99px;border:1px solid var(--bd);color:var(--t2);text-transform:uppercase}
+.badge.live{border-color:rgba(76,195,138,.5);color:#4CC38A}
+.wk h3{font-size:21px;margin:12px 0 8px}
+.wk p{color:var(--t2);font-size:15.5px}
+.wk ul{list-style:none;margin:14px 0 0;display:grid;gap:7px;font-size:15px}
+.wk li{display:flex;gap:9px}
+.wk li:before{content:"";width:16px;height:16px;flex:none;margin-top:4px;background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E8A420' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12.5l5 5L20 6'/%3E%3C/svg%3E")}
+.wk .more{margin-top:auto;padding-top:18px;font-weight:700;color:var(--amb)}
+.pdv{display:grid;grid-template-columns:1.1fr .9fr;gap:0;grid-column:1/-1}
+.pdv .vis{background:#151412;border-right:1px solid var(--bd);display:grid;place-items:center;padding:28px}
+@media(max-width:860px){.pdv{grid-template-columns:1fr}.pdv .vis{border-right:0;border-bottom:1px solid var(--bd)}}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px;counter-reset:st}
+@media(max-width:960px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+.step{border-top:3px solid var(--amb);padding-top:18px}
+.step .n{font-family:"Bebas Neue";font-size:48px;line-height:1;color:var(--amb)}
+.step h3{font-size:18px;margin:6px 0 6px}
+.step p{color:var(--t2);font-size:15px}
+/* preços */
+.price .card{display:flex;flex-direction:column}
+.price .val{font-family:"Bebas Neue";font-size:52px;line-height:1;margin:14px 0 4px}
+.price .val small{font-family:Inter;font-size:15px;color:var(--t2);font-weight:400}
+.price .card.hl{border-color:var(--amb)}
+.price ul{list-style:none;margin:16px 0 0;display:grid;gap:8px;font-size:15px;color:var(--off)}
+.price li{display:flex;gap:9px}
+.price li:before{content:"✓";color:var(--amb);font-weight:700}
+.fine{margin-top:22px;font-size:14px;color:var(--t2)}
+/* sobre */
+.about{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:start}
+.about .mark{width:120px}
+@media(max-width:640px){.about{grid-template-columns:1fr}.about .mark{width:80px}}
+.about p{color:var(--t2);font-size:17px;margin-top:14px;max-width:720px}
+.about p b{color:var(--off)}
+/* cta */
+.cta{background:var(--amb);color:var(--gra);border-radius:22px;padding:56px 40px;text-align:center}
+.cta h2{color:var(--gra)}
+.cta p{font-size:18px;margin:14px auto 26px;max-width:560px;color:#3b2c0a}
+.cta .btn{background:var(--gra);color:var(--off)}
+footer{padding:40px 0 48px;color:var(--t2);font-size:14px}
+footer .row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer svg{height:20px;width:auto;opacity:.8}
+.float{position:fixed;right:18px;bottom:18px;z-index:30;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.float svg{width:30px;height:30px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#" aria-label="ResolvX"><svg style="height:26px;width:auto" xmlns="http://www.w3.org/2000/svg" viewBox="-60 -60 2928 820"><path d="M41 0H204Q289 0 328.0 39.5Q367 79 367 161V204Q367 313 295 342V344Q335 356 351.5 393.0Q368 430 368 492V615Q368 645 370.0 663.5Q372 682 380 700H268Q262 683 260.0 668.0Q258 653 258 614V486Q258 438 242.5 419.0Q227 400 189 400H151V700H41ZM191 300Q224 300 240.5 283.0Q257 266 257 226V172Q257 134 243.5 117.0Q230 100 201 100H151V300Z" fill="#F2EDE4"/><path d="M462 0H762V100H572V285H723V385H572V600H762V700H462Z" fill="#F2EDE4"/><path d="M824 534V494H928V542Q928 610 985 610Q1013 610 1027.5 593.5Q1042 577 1042 540Q1042 496 1022.0 462.5Q1002 429 948 382Q880 322 853.0 273.5Q826 225 826 164Q826 81 868.0 35.5Q910 -10 990 -10Q1069 -10 1109.5 35.5Q1150 81 1150 166V195H1046V159Q1046 123 1032.0 106.5Q1018 90 991 90Q936 90 936 157Q936 195 956.5 228.0Q977 261 1031 308Q1100 368 1126.0 417.0Q1152 466 1152 532Q1152 618 1109.5 664.0Q1067 710 986 710Q906 710 865.0 664.5Q824 619 824 534Z" fill="#F2EDE4"/><path d="M1225 534V166Q1225 82 1268.0 36.0Q1311 -10 1392 -10Q1473 -10 1516.0 36.0Q1559 82 1559 166V534Q1559 618 1516.0 664.0Q1473 710 1392 710Q1311 710 1268.0 664.0Q1225 618 1225 534ZM1449 541V159Q1449 90 1392 90Q1335 90 1335 159V541Q1335 610 1392 610Q1449 610 1449 541Z" fill="#F2EDE4"/><path d="M1651 0H1761V600H1942V700H1651Z" fill="#F2EDE4"/><path d="M1972.0 294.0 L2090.0 294.0 L2144.2 476.9 L2255.1 0.0 L2373.1 0.0 L2210.3 700.0 L2092.3 700.0 Z" fill="#E8A420"/><path d="M2539.9 342 2418.9 0H2534.9L2608.9 226H2610.9L2686.9 0H2790.9L2669.9 342L2796.9 700H2680.9L2600.9 456H2598.9L2516.9 700H2412.9Z" fill="#F2EDE4"/></svg></a>
+    <nav><a href="#servicos">Serviços</a><a href="#trabalhos">Trabalhos</a><a href="#como">Como funciona</a><a href="#valores">Valores</a></nav>
+    <a class="btn btn-p" href="https://wa.me/5544999830338?text=Oi%2C%20Sergio!%20Vim%20pelo%20site%20da%20ResolvX." target="_blank" rel="noopener"><svg class="wa" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.1c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm5.9 15.2c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.8 5.1 2.9 1.1 3.4.9 4 .8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>WhatsApp</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <h1 class="bebas">Site e sistema pra quem não tem tempo de <span class="amb">ficar no telefone</span></h1>
+      <p class="lead">Área do cliente, 2ª via de boleto e Pix com baixa automática, automações. Para imobiliárias, escritórios de contabilidade e comércio de Maringá e região.</p>
+      <div class="ctas">
+        <a class="btn btn-p" href="https://wa.me/5544999830338?text=Oi%2C%20Sergio!%20Vim%20pelo%20site%20da%20ResolvX." target="_blank" rel="noopener"><svg class="wa" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.1c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm5.9 15.2c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.8 5.1 2.9 1.1 3.4.9 4 .8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>Falar no WhatsApp</a>
+        <a class="btn btn-s" href="#trabalhos">Ver trabalhos</a>
+      </div>
+      <p class="note">Você vê o layout antes de pagar qualquer coisa.</p>
+    </div>
+    <div class="phone">
+      <img src="img/mob-imob.jpg" alt="Prévia de site de imobiliária no celular, com busca de imóveis e área do inquilino" width="390" height="750">
+      <span class="tag">Projeto conceito · imobiliária</span>
+    </div>
+  </div>
+</section>
+
+<section class="s dor">
+  <div class="wrap">
+    <p class="kicker">O que trava o dia</p>
+    <h2>Trabalho repetido que <span class="amb">o sistema faz sozinho</span></h2>
+    <div class="cards c3">
+      <div class="card"><span class="x">01</span><h3>Cliente pedindo 2ª via no WhatsApp</h3><p>Cada boleto reenviado na mão é uma pausa no que importa. Na área do cliente ele baixa sozinho, a qualquer hora.</p></div>
+      <div class="card"><span class="x">02</span><h3>Conferir pagamento um por um</h3><p>Com a baixa automática pelo banco, o boleto ou Pix pago já aparece quitado. Sem extrato aberto do lado.</p></div>
+      <div class="card"><span class="x">03</span><h3>Quem procura não acha vocês</h3><p>Sem site, o cliente novo fica no Instagram ou vai pro concorrente. Uma vitrine simples resolve.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="servicos">
+  <div class="wrap">
+    <p class="kicker">Serviços</p>
+    <h2>O que eu faço</h2>
+    <div class="cards c4">
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></div><h3>Site com vitrine</h3><p>Imóveis ou serviços com fotos, filtros e o contato caindo direto no WhatsApp.</p></div>
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div><h3>Área do cliente</h3><p>Login do cliente ou inquilino com 2ª via, documentos e histórico, pelo celular.</p></div>
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 10h18M5 10V20M10 10v10M14 10v10M19 10v10M3 20h18M12 3l9 5H3z"/></svg></div><h3>Boleto e Pix com baixa automática</h3><p>Integração com o banco: gera a cobrança e marca como paga sozinho quando cai.</p></div>
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div><h3>Sistemas e automações</h3><p>PDV, financeiro, relatórios e integrações sob medida para a rotina do seu negócio.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="trabalhos">
+  <div class="wrap">
+    <p class="kicker">Trabalhos</p>
+    <h2>O que já está rodando</h2>
+    <p class="sub">Um sistema em produção e dois projetos conceito, feitos para mostrar como fica para imobiliária e contabilidade.</p>
+    <div class="work">
+      <article class="wk pdv">
+        <div class="vis"><figure style="width:100%;max-width:440px;margin:0"><svg viewBox="0 0 440 290" style="width:100%;height:auto" role="img" aria-label="Ilustração de uma tela de caixa">
+<rect x="0" y="0" width="440" height="270" rx="14" fill="#1E1D1B" stroke="#3A3935"/>
+<rect x="0" y="0" width="440" height="34" rx="14" fill="#2A2926"/><rect x="0" y="20" width="440" height="14" fill="#2A2926"/>
+<circle cx="20" cy="17" r="5" fill="#E8A420"/><rect x="34" y="12" width="90" height="10" rx="3" fill="#3A3935"/><rect x="330" y="10" width="92" height="14" rx="7" fill="#4CC38A" opacity=".85"/>
+<g fill="#2A2926" stroke="#3A3935"><rect x="16" y="48" width="250" height="34" rx="8"/><rect x="16" y="90" width="120" height="70" rx="10"/><rect x="146" y="90" width="120" height="70" rx="10"/><rect x="16" y="170" width="120" height="70" rx="10"/><rect x="146" y="170" width="120" height="70" rx="10"/></g>
+<g fill="#A8A197" opacity=".55"><rect x="28" y="60" width="140" height="9" rx="3"/><rect x="28" y="136" width="70" height="8" rx="3"/><rect x="158" y="136" width="60" height="8" rx="3"/><rect x="28" y="216" width="80" height="8" rx="3"/><rect x="158" y="216" width="66" height="8" rx="3"/></g>
+<g fill="#E8A420"><rect x="28" y="104" width="44" height="22" rx="5" opacity=".9"/><rect x="158" y="104" width="44" height="22" rx="5" opacity=".9"/><rect x="28" y="184" width="44" height="22" rx="5" opacity=".9"/><rect x="158" y="184" width="44" height="22" rx="5" opacity=".9"/></g>
+<rect x="280" y="48" width="144" height="192" rx="10" fill="#2A2926" stroke="#3A3935"/>
+<g fill="#A8A197" opacity=".6"><rect x="292" y="62" width="80" height="8" rx="3"/><rect x="292" y="82" width="100" height="7" rx="3"/><rect x="292" y="98" width="88" height="7" rx="3"/><rect x="292" y="114" width="96" height="7" rx="3"/></g>
+<rect x="292" y="150" width="120" height="1" fill="#3A3935"/><rect x="292" y="160" width="40" height="9" rx="3" fill="#A8A197" opacity=".6"/><rect x="360" y="157" width="52" height="14" rx="3" fill="#F2EDE4"/>
+<rect x="292" y="190" width="120" height="36" rx="9" fill="#E8A420"/><path d="M340 208l7 7 14-15" stroke="#1E1D1B" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><figcaption style="font-size:12px;color:#A8A197;margin-top:10px;text-align:center">Ilustração da tela de caixa</figcaption></figure></div>
+        <div class="body">
+          <span class="badge live">Em produção</span>
+          <h3>PDV da Rocá Conveniência</h3>
+          <p>Sistema de caixa feito para a minha própria loja em Maringá, porque nenhum do mercado atendia. Hoje roda em duas lojas.</p>
+          <ul>
+            <li>Funciona no navegador e no celular</li>
+            <li>Caixa, financeiro, fornecedores e maquininhas</li>
+            <li>Entrada de estoque pelo XML da nota fiscal</li>
+            <li>NFC-e e pedidos do iFood integrados</li>
+          </ul>
+        </div>
+      </article>
+      <article class="wk">
+        <div class="shot"><img src="img/demo-imobiliaria.jpg" alt="Projeto conceito de site de imobiliária" width="1280" height="800"></div>
+        <div class="body">
+          <span class="badge">Projeto conceito</span>
+          <h3>Site de imobiliária</h3>
+          <p>Busca de imóveis, contato direto no WhatsApp e área do inquilino com 2ª via do aluguel.</p>
+          <a class="more" href="https://sergiopile.github.io/previas/demo-imobiliaria/" target="_blank" rel="noopener">Abrir a prévia →</a>
+        </div>
+      </article>
+      <article class="wk">
+        <div class="shot"><img src="img/demo-contabilidade.jpg" alt="Projeto conceito de site de contabilidade" width="1280" height="800"></div>
+        <div class="body">
+          <span class="badge">Projeto conceito</span>
+          <h3>Site de contabilidade</h3>
+          <p>Área do cliente com envio de documentos, guias e 2ª via dos honorários pelo celular.</p>
+          <a class="more" href="https://sergiopile.github.io/previas/demo-contabilidade/" target="_blank" rel="noopener">Abrir a prévia →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="como">
+  <div class="wrap">
+    <p class="kicker">Como funciona</p>
+    <h2>Você só paga <span class="amb">depois de ver</span></h2>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Conversa</h3><p>Pelo WhatsApp, entendo a rotina e o que mais toma tempo hoje.</p></div>
+      <div class="step"><div class="n">2</div><h3>Rascunho</h3><p>Monto o layout com a cara do seu negócio. Nada pra começar.</p></div>
+      <div class="step"><div class="n">3</div><h3>Aprovou, começa</h3><p>50% quando você aprova o layout.</p></div>
+      <div class="step"><div class="n">4</div><h3>Entrega</h3><p>50% na entrega. A mensalidade começa só depois, com hospedagem, backup e ajustes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="s price" id="valores">
+  <div class="wrap">
+    <p class="kicker">Valores</p>
+    <h2>Faixas de preço</h2>
+    <p class="sub">O valor final depende do que o seu negócio precisa. Esses são os pontos de partida.</p>
+    <div class="cards c3">
+      <div class="card"><h3>Site</h3><div class="val">R$ 700 <small>a partir de</small></div><p class="t2">+ R$ 99/mês</p><ul><li>Vitrine de imóveis ou serviços</li><li>Contato direto no WhatsApp</li><li>Funciona bem no celular</li></ul></div>
+      <div class="card hl"><h3>Site com área do cliente</h3><div class="val">R$ 2.500 <small>a partir de</small></div><p class="t2">+ R$ 149/mês</p><ul><li>Tudo do site</li><li>Login do cliente ou inquilino</li><li>2ª via de boleto e Pix com baixa automática</li></ul></div>
+      <div class="card"><h3>Sistemas e automações</h3><div class="val">Sob consulta</div><p class="t2">conforme o escopo</p><ul><li>PDV e financeiro</li><li>Integrações com banco e sistemas</li><li>Relatórios e rotinas automáticas</li></ul></div>
+    </div>
+    <p class="fine">Também dá pra começar com R$ 0 de entrada e uma mensalidade um pouco maior.</p>
+  </div>
+</section>
+
+<section class="s" id="sobre">
+  <div class="wrap about">
+    <div class="mark"><svg style="width:100%;height:auto;border-radius:22%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="113" fill="#E8A420"/><path d="M128 266 L220 358 L389 164" fill="none" stroke="#1E1D1B" stroke-width="67" stroke-linecap="square" stroke-linejoin="miter"/></svg></div>
+    <div>
+      <p class="kicker">Quem faz</p>
+      <h2>Sergio Pilé</h2>
+      <p>Desenvolvedor full stack em Maringá. Há <b>4 anos</b> faço sistemas para imobiliárias: CRM, sites, boletos e baixa automática pelo banco.</p>
+      <p>Também sou dono da <b>Rocá Conveniência</b> e fiz o PDV que roda nela. Por isso a ResolvX trabalha assim: sistema feito por quem também toca um negócio.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Quer ver como ficaria o seu?</h2>
+      <p>Me chama no WhatsApp. Eu monto um rascunho e você decide depois de ver.</p>
+      <a class="btn" href="https://wa.me/5544999830338?text=Oi%2C%20Sergio!%20Vim%20pelo%20site%20da%20ResolvX." target="_blank" rel="noopener"><svg class="wa" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.1c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm5.9 15.2c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.8 5.1 2.9 1.1 3.4.9 4 .8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>(44) 99983-0338</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <span><svg style="height:20px;width:auto;opacity:.75" xmlns="http://www.w3.org/2000/svg" viewBox="-60 -60 2928 820"><path d="M41 0H204Q289 0 328.0 39.5Q367 79 367 161V204Q367 313 295 342V344Q335 356 351.5 393.0Q368 430 368 492V615Q368 645 370.0 663.5Q372 682 380 700H268Q262 683 260.0 668.0Q258 653 258 614V486Q258 438 242.5 419.0Q227 400 189 400H151V700H41ZM191 300Q224 300 240.5 283.0Q257 266 257 226V172Q257 134 243.5 117.0Q230 100 201 100H151V300Z" fill="#F2EDE4"/><path d="M462 0H762V100H572V285H723V385H572V600H762V700H462Z" fill="#F2EDE4"/><path d="M824 534V494H928V542Q928 610 985 610Q1013 610 1027.5 593.5Q1042 577 1042 540Q1042 496 1022.0 462.5Q1002 429 948 382Q880 322 853.0 273.5Q826 225 826 164Q826 81 868.0 35.5Q910 -10 990 -10Q1069 -10 1109.5 35.5Q1150 81 1150 166V195H1046V159Q1046 123 1032.0 106.5Q1018 90 991 90Q936 90 936 157Q936 195 956.5 228.0Q977 261 1031 308Q1100 368 1126.0 417.0Q1152 466 1152 532Q1152 618 1109.5 664.0Q1067 710 986 710Q906 710 865.0 664.5Q824 619 824 534Z" fill="#F2EDE4"/><path d="M1225 534V166Q1225 82 1268.0 36.0Q1311 -10 1392 -10Q1473 -10 1516.0 36.0Q1559 82 1559 166V534Q1559 618 1516.0 664.0Q1473 710 1392 710Q1311 710 1268.0 664.0Q1225 618 1225 534ZM1449 541V159Q1449 90 1392 90Q1335 90 1335 159V541Q1335 610 1392 610Q1449 610 1449 541Z" fill="#F2EDE4"/><path d="M1651 0H1761V600H1942V700H1651Z" fill="#F2EDE4"/><path d="M1972.0 294.0 L2090.0 294.0 L2144.2 476.9 L2255.1 0.0 L2373.1 0.0 L2210.3 700.0 L2092.3 700.0 Z" fill="#F2EDE4"/><path d="M2539.9 342 2418.9 0H2534.9L2608.9 226H2610.9L2686.9 0H2790.9L2669.9 342L2796.9 700H2680.9L2600.9 456H2598.9L2516.9 700H2412.9Z" fill="#F2EDE4"/></svg></span>
+    <span>Maringá/PR · WhatsApp (44) 99983-0338 · resolvx.com.br</span>
+  </div>
+</footer>
+<a class="float" href="https://wa.me/5544999830338?text=Oi%2C%20Sergio!%20Vim%20pelo%20site%20da%20ResolvX." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.1c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 23.2c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.2 1.2-4-.3-.4c-1.1-1.7-1.7-3.6-1.7-5.6C5.3 9.8 10.1 5 16 5s10.7 4.8 10.7 10.7S21.9 26.2 16 26.2zm5.9-8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.8 5.1 2.9 1.1 3.4.9 4 .8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg></a>
+</body>
+</html>
